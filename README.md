@@ -3,4 +3,5 @@
 Reference [learn.forge.viewmodels](https://github.com/Autodesk-Forge/learn.forge.viewmodels)
 
 - Forge Viewer
+- Shotgun Action Menu Item
 - Shotgun REST API
