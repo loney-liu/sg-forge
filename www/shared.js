@@ -9,6 +9,20 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function empty(e) {
+  switch (e) {
+    case "":
+    case 0:
+    case "0":
+    case null:
+    case false:
+    case typeof this == "undefined":
+      return true;
+    default:
+      return false;
+  }
+}
+
 String.prototype.format = function() {
     var formatted = this;
     for( var arg in arguments ) {
