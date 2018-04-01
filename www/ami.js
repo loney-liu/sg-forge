@@ -22,24 +22,10 @@ $(document).ready(function () {
 	$.ajax(settings).done(function (response) {
 	  console.log(response);
 	  var code = response.data.attributes.code;
-	  $('body').append(code);
+	  var revit_win_path = response.data.attributes.sg_file_link.local_path_windows;
+	  var revit_mac_path = response.data.attributes.sg_file_link.local_path_mac;
+	  $('body').append(revit_mac_path);
+	  $('body').append("<br>");
+	  $('body').append(revit_win_path);
 	});
 });
-
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-String.prototype.format = function() {
-    var formatted = this;
-    for( var arg in arguments ) {
-        formatted = formatted.replace("{" + arg + "}", arguments[arg]);
-    }
-    return formatted;
-};
