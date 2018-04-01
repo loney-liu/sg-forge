@@ -1,6 +1,6 @@
-# learn.forge.viewmodels-simple-skeleton
-a test harness forked from https://github.com/Autodesk-Forge/learn.forge.viewmodels
+# Demonstrate how to use Forge to view Shotgun assets.
 
-This test harness is based on the tutorial http://learnforge.autodesk.io/#/, but with more simpler client, in order to help to understand the unit test of Forge API.
+Reference [learn.forge.viewmodels](https://github.com/Autodesk-Forge/learn.forge.viewmodels)
 
-Switch to the corresponding language to test.
+- Forge Viewer
+- Shotgun REST API
